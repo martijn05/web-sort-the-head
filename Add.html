@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./Assets/Css/style.css">
+        <title>Add person</title>
+    </head>
+    <body>
+        <div class="container">
+
+            <h1>Add person</h1>
+
+            <form action="./Add.php" method="POST">
+    
+                <label for="input-firtsname" class="input">
+                    Firstname
+                </label> 
+                <br>
+                <input type="text" id="input-firtsname" class="input" required/>
+                <br>
+                <br>
+                <label for="input-name"class="input">
+                    Name
+                </label> 
+                <br>
+                <input type="text" id="input-name" class="input"required/>
+                <br>
+                <br>
+    
+    
+                <label for="user_genderS" class="text-acc" class="input">
+                    Gender
+                </label>
+                
+                </br>
+                <input type="radio" name="user_genderS" value="Male" class="input">
+                 <label for="gender_male" class="text-acc" class="input">
+                    Male
+                     
+                 </label>
+                </br>
+                 <input type="radio" name="user_genderS" value="Female" class="input">
+        
+                 <label for="gender_female" class="text-acc"class="input">
+                    Female
+                     
+                 </label>
+                </br>
+                 <input type="radio" name="user_genderS" value="Other"class="input">
+        
+                 <label for="gender_Other" class="text-acc"class="input">
+                    Other
+                    
+                 </label>
+                </br>
+                </br>
+    
+                <label for="input-description" class="input">
+                    Description
+                </label> 
+                <br>
+                <input type="text" id="input-description" class="input"/>
+                <br>
+                <br>
+    
+    
+                <input type="submit" class="submit-button input">
+            </form>
+        </div>
+
+        
+
+
+        <script src="./Assets/JS/script.js"></script>
+    </body>
+</html>
