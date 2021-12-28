@@ -14,22 +14,27 @@
             </h1>
     
             <?php
-    
-            include "./Components/DB.php"
-    
-            //$sql = "SELECT input-firtsname,user-genderS,input-name from user'";
-    
-    
-             //$result = mysqli_query($conn, $sql);
-          //$user = $result->fetch_all(MYSQLI_ASSOC);
+            //db
+            include "./Components/DB.php";
+            // SElect all
+            $sql = "SELECT * FROM `user`";
+             
+            $result = mysqli_query($conn, $sql);
 
-        //   foreach ($user as $item) {
-        //     echo ($item["input-firtsname"]);
-        //     echo ($item["input-name"]);  
-        //     echo ($item["user_genderS"]);
-        //     echo ($item["input-description"]);  
+            if($result) {
+                while($row = mysqli_fetch_assoc($result)) {
+                    echo json_encode($row);
+                }
+            }
+
+           
+
+            // Close conn
+            mysqli_close($conn);
             
-        }
+              
+             
+           
             ?>
     
             <img src="./Assets/Images/Sorting_Hat.png" alt="sorting head" id="sortingheadsort">

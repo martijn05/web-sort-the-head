@@ -10,19 +10,25 @@
         <body>
         <?php
 
+            // kan de gegevens niet ophalen uit de form
+            // ik weet niet waarom het niet werkt.
             $user_firstname = $_POST["input-firtsname"];
             $user_gender =  $_POST["user_genderS"];
             $user_name =  $_POST["input-name"];
             $user_description =  $_POST["input-description"];
 
+           
 
+            // DB conn
+            include "./Components/DB.php";
 
-            include "./Components/DB.php"
-
-            $sql =  " INSERT INTO user (Firstname, Name, Gender, Description) VALUES ('$user_firstname', '$user_name', '$user_genderS', '$user_description')";
+            // statement werkt alleen zijn de velden leeg 
+            //omdat het opnemen van de form niet werkt
+            $sql =  " INSERT INTO `user` (`Firstname`, `Name`, `Gender`, `Description`) VALUES ('$user_firstname', '$user_name', '$user_genderS', '$user_description')";
 
                 
-                $result = mysqli_query($conn, $sql);
+            if (mysqli_query($conn, $sql)) {
+                echo "New record created successfully !";}
                 
             ?>
                 <h1>Your account is added to the Database!</h1>
@@ -31,7 +37,7 @@
                     <?php
 
                 
-            }
+            
             $conn->close();
             ?>
         </body>

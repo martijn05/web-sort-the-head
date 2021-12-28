@@ -1,5 +1,4 @@
 var ButtonGryfindor = document.querySelector(".choose-Gryffondor");
-var ButtonGr = document.querySelector(".choose-Gryffondor");
 var ButtonSlytherin = document.querySelector(".choose-Slytherin");
 var ButtonRavenclaw = document.querySelector(".choose-Ravenclaw");
 var ButtonHufflepuff = document.querySelector(".choose-Hufflepuff");
@@ -21,35 +20,9 @@ ButtonGryfindor.addEventListener("click", function(ButtonGryfindor)
     body.append(butgrif)
 });
 
-ButtonSlytherin.addEventListener("click", function(ButtonGryfindor)
-{
 
-    ButtonSlytherin.innerHTML = "Gryfindor " + procent + "%"
-    var butslyth = document.createElement("button")
-    butslyth.innerHTML = "Gryfindor " + procent + "%"
 
-    ButtonGr.classList.add("notvis")
 
-    body.append(butslyth)
-});
-
-ButtonGryfindor.addEventListener("click", function(ButtonGryfindor)
-{
-
-    ButtonGryfindor.innerHTML = "Gryfindor " + procent + "%"
-    var butgrif = document.createElement("button")
-    butgrif.innerHTML = "Gryfindor " + procent + "%"
-
-    ButtonGr.classList.add("notvis")
-
-    body.append(butgrif)
-});
-
-submit.addEventListener("click", function(){
-
-document.Write("Added to Database")
-
-});
 
 
 
